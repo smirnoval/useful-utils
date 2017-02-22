@@ -14,13 +14,14 @@ from copy import deepcopy
 
 
 BASE_NEWS_URL = 'http://ria.ru/'
-FILEPATH = "/path/to/news.pdf"
+FILEPATH = os.path.dirname(__file__)+"/news.pdf"
 SUBJECT = "News"
 SEND_TO = "name@someMail.com"
 USER_NAME = "yourName@someMail.com"
 USER_PASSWORD = "yourPassword"
 SERVER = "smtp.gmail.com"
 PORT = 25
+
 
 def send_email(FILEPATH, SEND_TO, SUBJECT ):
     basename = os.path.basename(FILEPATH)
@@ -85,9 +86,7 @@ def get_news_information(url):
 if __name__ == '__main__':
     news_links = get_news_links()
     news_dict = {}
-    a = 0
-    for i in news_links:
-        news_dict[a] = get_news_information(i)
-        a += 1
+    for i in range(len(news_links)):
+        news_dict[i] = get_news_information(news_links[i])
     make_PDF(news_dict)
     send_email(FILEPATH, SEND_TO, SUBJECT)
