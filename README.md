@@ -16,16 +16,16 @@ My utilities
 
 
 ## Implementations of  naive cryptosystems
-	- Trisemus
-    - Atbash
-    - Magic square
-    - Route transposition
-    - Double transposition
-    - Simple caesar
-    - Affine system caesar
-    - Key word caesar
-    - Playfair
-    - Polybius
-    - Сoordinate polybius
-    - Scytale
-    - Two-square cipher
+ - Trisemus
+ - Atbash
+ - Magic square
+ - Route transposition
+ - Double transposition
+ - Simple caesar
+ - Affine system caesar
+ - Key word caesar
+ - Playfair
+ - Polybius
+ - Сoordinate polybius
+ - Scytale
+ - Two-square cipher
