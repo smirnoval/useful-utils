@@ -16,6 +16,7 @@ My utilities
 
 
 ## Implementations of  naive cryptosystems
+
  - Trisemus
  - Atbash
  - Magic square
@@ -29,3 +30,19 @@ My utilities
  - Сoordinate polybius
  - Scytale
  - Two-square cipher
+
+## Case converters
+
+ - Snake case to Camel case
+ - Camel case to Snake case
+
+## Mail lib
+
+```python
+from mail import MailBox, Email
+
+mailbox = MailBox("smtp.gmail.com", 587, auth=("gmail_login@gmail.com", "gmail_password"))
+mailbox.start()
+mail = Email("from@gmail.com", ["to@gmail.com"], subject="mail title", content="<p>Your message</p>", content_type="html")
+mailbox.send_mail(mail)
+```
